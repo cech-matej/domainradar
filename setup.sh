@@ -31,6 +31,9 @@ declare -A config_options=(
     # An API token for the AbuseIPDB service. Leave emptry to disable AbuseIPDB (i.e. the collector
     # will run but produce empty responses).
     ["ABUSEIPDB_TOKEN"]=""
+    # An API token for the VirusTotal service. Leave emptry to disable VirusTotal (i.e. the collector
+    # will run but produce empty responses).
+    ["VIRUSTOTAL_TOKEN"]=""
     
     # -> DomainRadar Web UI <-
     ["WEBUI_ADMIN_USERNAME"]="admin"
@@ -285,6 +288,7 @@ make_log4j_configs() {
         tls
         qradar
         abuseipdb
+        virustotal
     )
 
     for service in "${services[@]}"
