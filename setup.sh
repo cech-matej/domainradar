@@ -50,6 +50,9 @@ declare -A config_options=(
     # An API token for the Threatfox abuse.ch service. Leave emptry to disable Threatfox (i.e. the collector
     # will run but produce empty responses).
     ["THREATFOX_TOKEN"]=""
+    # An API token for the CriminalIP service. Leave emptry to disable CriminalIP (i.e. the collector
+    # will run but produce empty responses).
+    ["CRIMINALIP_TOKEN"]=""
     # An API token for the Google Safe Browsing service. Leave emptry to disable Google Safe Browsing
     # (i.e. the collector will run but produce empty responses).
     ["GOOGLE_SAFE_BROWSING_TOKEN"]=""
@@ -308,6 +311,7 @@ make_log4j_configs() {
         qradar
         abuseipdb
         cloudflare_radar
+        criminalip
         google_safe_browsing
         greynoise
         hybridanalysis
