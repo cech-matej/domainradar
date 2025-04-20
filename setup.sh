@@ -34,6 +34,9 @@ declare -A config_options=(
     # An API token for the VirusTotal service. Leave emptry to disable VirusTotal (i.e. the collector
     # will run but produce empty responses).
     ["VIRUSTOTAL_TOKEN"]=""
+    # An API token for the Pulsedive service. Leave emptry to disable Pulsedive (i.e. the collector
+    # will run but produce empty responses).
+    ["PULSEDIVE_TOKEN"]=""
     # An API token for the Hybrid-analysis service. Leave emptry to disable Hybrid-analysis
     # (i.e. the collector will run but produce empty responses).
     ["HYBRIDANALYSIS_TOKEN"]=""
@@ -318,6 +321,7 @@ make_log4j_configs() {
         hybridanalysis
         opentip_kaspersky
         project_honeypot
+        pulsedive
         threatfox
         urlvoid
         virustotal
