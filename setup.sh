@@ -47,6 +47,9 @@ declare -A config_options=(
     # An API token for the Opentip Kaspersky service. Leave emptry to disable Opentip Kaspersky
     # (i.e. the collector will run but produce empty responses).
     ["OPENTIP_KASPERSKY_TOKEN"]=""
+    # An API token for the Threatfox abuse.ch service. Leave emptry to disable Threatfox (i.e. the collector
+    # will run but produce empty responses).
+    ["THREATFOX_TOKEN"]=""
     # An API token for the Google Safe Browsing service. Leave emptry to disable Google Safe Browsing
     # (i.e. the collector will run but produce empty responses).
     ["GOOGLE_SAFE_BROWSING_TOKEN"]=""
@@ -310,6 +313,7 @@ make_log4j_configs() {
         hybridanalysis
         opentip_kaspersky
         project_honeypot
+        threatfox
         urlvoid
         virustotal
     )
