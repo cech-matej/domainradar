@@ -305,6 +305,7 @@ make_log4j_configs() {
         google_safe_browsing
         hybridanalysis
         opentip_kaspersky
+        project_honeypot
         urlvoid
         virustotal
     )
