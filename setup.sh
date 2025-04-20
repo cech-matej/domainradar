@@ -37,6 +37,10 @@ declare -A config_options=(
     # An API token for the Hybrid-analysis service. Leave emptry to disable Hybrid-analysis
     # (i.e. the collector will run but produce empty responses).
     ["HYBRIDANALYSIS_TOKEN"]=""
+    # An API token and account ID for the Cloudflare Radar service. Leave emptry to disable
+    # Cloudflare Radar (i.e. the collector will run but produce empty responses).
+    ["CLOUDFLARE_RADAR_TOKEN"]=""
+    ["CLOUDFLARE_RADAR_ACCOUNTID"]=""
     
     # -> DomainRadar Web UI <-
     ["WEBUI_ADMIN_USERNAME"]="admin"
@@ -291,6 +295,7 @@ make_log4j_configs() {
         tls
         qradar
         abuseipdb
+        cloudflare_radar
         hybridanalysis
         virustotal
     )
