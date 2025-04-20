@@ -41,6 +41,9 @@ declare -A config_options=(
     # Cloudflare Radar (i.e. the collector will run but produce empty responses).
     ["CLOUDFLARE_RADAR_TOKEN"]=""
     ["CLOUDFLARE_RADAR_ACCOUNTID"]=""
+    # An API token for the Opentip Kaspersky service. Leave emptry to disable Opentip Kaspersky
+    # (i.e. the collector will run but produce empty responses).
+    ["OPENTIP_KASPERSKY_TOKEN"]=""
     
     # -> DomainRadar Web UI <-
     ["WEBUI_ADMIN_USERNAME"]="admin"
@@ -297,6 +300,7 @@ make_log4j_configs() {
         abuseipdb
         cloudflare_radar
         hybridanalysis
+        opentip_kaspersky
         virustotal
     )
 
