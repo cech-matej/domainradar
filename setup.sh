@@ -312,6 +312,7 @@ make_log4j_configs() {
         abuseipdb
         cloudflare_radar
         criminalip
+        fortiguard
         google_safe_browsing
         greynoise
         hybridanalysis
