@@ -37,6 +37,9 @@ declare -A config_options=(
     # An API token for the Hybrid-analysis service. Leave emptry to disable Hybrid-analysis
     # (i.e. the collector will run but produce empty responses).
     ["HYBRIDANALYSIS_TOKEN"]=""
+    # An API token for the Greynoise service. Leave emptry to disable Greynoise (i.e. the collector
+    # will run but produce empty responses).
+    ["GREYNOISE_TOKEN"]=""
     # An API token and account ID for the Cloudflare Radar service. Leave emptry to disable
     # Cloudflare Radar (i.e. the collector will run but produce empty responses).
     ["CLOUDFLARE_RADAR_TOKEN"]=""
@@ -303,6 +306,7 @@ make_log4j_configs() {
         abuseipdb
         cloudflare_radar
         google_safe_browsing
+        greynoise
         hybridanalysis
         opentip_kaspersky
         project_honeypot
