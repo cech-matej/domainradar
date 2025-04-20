@@ -28,6 +28,9 @@ declare -A config_options=(
     # (i.e. the collector will run but not consume requests).
     ["QRADAR_URL"]=""
     ["QRADAR_TOKEN"]=""
+    # An API token for the AbuseIPDB service. Leave emptry to disable AbuseIPDB (i.e. the collector
+    # will run but produce empty responses).
+    ["ABUSEIPDB_TOKEN"]=""
     
     # -> DomainRadar Web UI <-
     ["WEBUI_ADMIN_USERNAME"]="admin"
@@ -276,7 +279,13 @@ configure_sql() {
 make_log4j_configs() {
     local dir="$INFRA_DIR/client_properties"
     local template="$dir/log4j2_template.xml"
-    local services=(geo_asn nerd tls qradar)
+    local services=(
+        geo_asn
+        nerd
+        tls
+        qradar
+        abuseipdb
+    )
 
     for service in "${services[@]}"
     do
